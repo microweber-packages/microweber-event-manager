@@ -27,7 +27,7 @@ class EventManagerServiceProvider extends ServiceProvider
          * @property \MicroweberPackages\EventManager\Event    $event_manager
          */
         $this->app->singleton('event_manager', function ($app) {
-            return new Event();
+            return new Event($app);
         });
     }
 }
