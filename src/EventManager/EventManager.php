@@ -11,12 +11,12 @@
 namespace MicroweberPackages\EventManager;
 
 /**
- * Event.
+ * Event manager.
  *
- * @category Event
- * @desc  Event
+ * @category EventManager
+ * @desc  EventManager
  */
-class Event
+class EventManager
 {
     /**
      * An instance of the event adapter to use.

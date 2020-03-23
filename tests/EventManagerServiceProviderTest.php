@@ -1,10 +1,8 @@
 <?php
 
-class DatabaseManagerServiceProviderTest extends BaseTest
+class EventManagerServiceProviderTest extends BaseTest
 {
-	public function testDatabaseManagerWhenUsing(){
-
-		$this->assertInstanceOf(\MicroweberPackages\EventManager\DatabaseManager::class, app('database_manager'));
+	public function testEventManagerWhenUsing() {
+		$this->assertInstanceOf(\MicroweberPackages\EventManager\EventManager::class, app('event_manager'));
 	}
-
 }
