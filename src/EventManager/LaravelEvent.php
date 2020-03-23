@@ -54,7 +54,7 @@ class LaravelEvent
         }
 
         // Laravel event
-        return Event::fire($api_function, $args);
+        // return Event::fire($api_function, $args); TODO
     }
 
     public static function event_bind($hook_name, $callback = false)
