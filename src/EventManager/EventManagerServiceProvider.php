@@ -24,10 +24,10 @@ class EventManagerServiceProvider extends ServiceProvider
     public function boot()
     {
         /**
-         * @property \MicroweberPackages\EventManager\EventManager    $event_manager
+         * @property \MicroweberPackages\EventManager\Event    $event_manager
          */
         $this->app->singleton('event_manager', function ($app) {
-            return new EventManager();
+            return new Event();
         });
     }
 }

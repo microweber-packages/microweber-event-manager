@@ -3,6 +3,6 @@
 class EventManagerServiceProviderTest extends BaseTest
 {
 	public function testEventManagerWhenUsing() {
-		$this->assertInstanceOf(\MicroweberPackages\EventManager\EventManager::class, app('event_manager'));
+		$this->assertInstanceOf(\MicroweberPackages\EventManager\Event::class, app('event_manager'));
 	}
 }
