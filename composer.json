@@ -1,54 +1,56 @@
 {
-  "name": "microweber-packages/microweber-event-manager",
-  "description": "Microweber event manager.",
-  "version": "0.0.1",
-  "authors": [
-    {
-      "name": "Microweber",
-      "email": "info@microweber.com"
+    "name": "microweber-packages/microweber-event-manager",
+    "description": "Standalone event manager package for Laravel. Provides a simple event binding and triggering system that can be used in any Laravel application.",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "MicroweberPackages\\Event\\": "src/"
+        },
+        "files": [
+            "src/helpers.php"
+        ]
     },
-    {
-      "name": "Bozhidar Slaveykov",
-      "email": "bobi@microweber.com"
-    }
-  ],
-  "require": {
-    "laravel/framework": "7.0.0",
-    "illuminate/database": "*",
-    "jeremeamia/superclosure": "*",
-    "microweber-packages/microweber-helpers": "dev-master"
-  },
-  "require-dev": {
-    "orchestra/testbench": "*",
-    "mockery/mockery": "*"
-  },
-  "autoload": {
-    "psr-4": {
-      "MicroweberPackages\\": "src/"
+    "autoload-dev": {
+        "psr-4": {
+            "MicroweberPackages\\Event\\Tests\\": "tests/"
+        }
     },
-    "files": [
-      "src/EventManager/helpers.php"
-    ]
-  },
-  "extra": {
-    "laravel": {
-      "providers": [
-        "MicroweberPackages\\EventManager\\EventManagerServiceProvider"
-      ],
-      "aliases": {
-        "EventManager": "MicroweberPackages\\EventManager\\EventManagerFacade"
-      }
+    "authors": [
+        {
+            "name": "Microweber",
+            "email": "info@microweber.com"
+        },
+        {
+            "name": "Bozhidar Slaveykov",
+            "email": "bobi@microweber.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php": "^8.1",
+        "illuminate/support": "^10.0|^11.0|^12.0|^13.0",
+        "microweber-packages/microweber-package": "*",
+        "spatie/laravel-package-tools": "^1.16"
+    },
+    "require-dev": {
+        "larastan/larastan": "^3.9",
+        "orchestra/testbench": "^8.0|^9.0|^10.0",
+        "phpunit/phpunit": "^10.0|^11.0"
+    },
+    "config": {
+        "preferred-install": "dist",
+        "sort-packages": true
+    },
+    "homepage": "http://microweber.com",
+    "support": {
+        "email": "support@microweber.com"
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "analyse": "vendor/bin/phpstan analyse --memory-limit=512M"
+    },
+    "replace": {
+        "microweber-packages/event-manager": "*"
     }
-  },
-  "config": {
-    "sort-packages": true
-  },
-  "minimum-stability": "dev",
-  "prefer-stable": true,
-  "homepage": "http://microweber.com",
-  "license": "MIT",
-  "support": {
-    "email": "support@microweber.com"
-  }
 }
-
